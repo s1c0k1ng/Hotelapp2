@@ -31,7 +31,7 @@ namespace Hotelapp2.HotelController.Booking
 
                 createBooking.StartDate = new DateTime(2000, 01, 01, 23, 59, 59);
 
-                while (createBooking.StartDate < DateTime.Now.Date)
+                while (createBooking.StartDate < DateTime.UtcNow)
                 {
                     Console.WriteLine("\n Type in your arrival date (yyyy-mm-dd): ");
                     createBooking.StartDate = Convert.ToDateTime(Console.ReadLine());
